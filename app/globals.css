@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2c3e50;
+  --accent: #c0392b;
+  --bg-light: #f8f9fa;
+  --text-dark: #2c3e50;
+}
+
+body {
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+.japanese-pattern {
+  background-color: #f8f9fa;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.section-title {
+  @apply text-3xl font-bold mb-8 text-center relative;
+  &::after {
+    content: "";
+    @apply block w-24 h-1 bg-red-700 mx-auto mt-4;
+  }
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-1;
+}
